@@ -1,2 +1,2 @@
 # geometry
-geometry stuff
+geometry project that uses sliders to manipulate the canvas
