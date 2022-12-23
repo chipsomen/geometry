@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Shapes Showcase</title>
+  </head>
+
+  <body>
+    <div class="tabs" width="">
+      <button class="tabbutton" onclick="updateTabs('rectangle'); updateShape('createRect')">Rectangle</button>
+      <button class="tabbutton" onclick="updateTabs('square'); updateShape('createSq')">Square</button>
+      <button class="tabbutton" onclick="updateTabs('rhombus'); updateRhombus('150')">Rhombus</button>
+      <button class="tabbutton">Parallelogram</button>
+    </div>
+    
+    <div class="shape" id="rectangle">
+      <p class="text">
+        Rectangle:
+      </p>
+      <ul style="list-style-type:circle;">
+          <li>Four vertices and four sides</li>
+          <li>Opposite sides are congruent</li>
+          <li>Opposite sides are parallel</li>
+          <li>All four angles are right angles</li>
+          <li>Diagonals are equal; they do not bisect each other</li>
+          <li>Consecutive angles add up to 180&deg;</li>
+          <li>Opposite angles are congruent</li>
+      </ul>
+      <p>Use the sliders to change the side lengths of the rectangle!<br>No matter what you do, it will <i>always</i> retain these seven properties!</p>
+      <input class="slider" type="range" id="1" min="50" max="450" value="200" oninput="updateShape('width', this.value)">
+      <input class="slider" type="range" id="2" min="50" max="450" value="150" oninput="updateShape('height', this.value)">
+    </div>
+    
+    <div class="shape" id="square">
+        <p class="text">Square:</p>
+        <ul style="list-style-type:circle;">
+          <li>Four vertices and four sides</li>
+          <li>Opposite sides are congruent</li>
+          <li>Opposite sides are parallel</li>
+          <li>All four sides are equal</li>
+          <li>Diagonals are congruent; they also bisect each other perpendicularly</li>
+          <li>All four angles are right angles</li>
+          <li>Consecutive angles add up to 180&deg;</li>
+          <li>Diagonals bisect angle pairs</li>
+      </ul>
+      <p>Use the sliders to change the side lengths of the square!<br>No mater what you do, it will <i>always</i> retain these eight properties!</p>
+        <input class="slider" type="range" id="3" min="50" max="450" value="150" oninput="updateShape('side', this.value)">
+    </div>
+    
+    <div class="shape" id="rhombus">
+        <p class="text">Rhombus:</p>
+        <ul style="list-style-type:circle;">
+          <li>All four sides are congruent</li>
+          <li>Opposite sides are parallel</li>
+          <li>Diagonals are <b>NOT</b> congruent</li>
+          <li>Diagonals bisect each other perpendicularly</li>
+          <li>Consecutive angles add up to 180&deg;</li>
+          <li>Diagonals bisect angle pairs</li>
+      </ul>
+      <p>Use the sliders to change the side lengths and angles of the rhombus!<br>No matter what you do, it will <i>always</i> retain these six properties!</p>
+        <input class="slider" type="range" id="4" min="50" max= "450" value="150" oninput="updateRhombus(this.value)">
+    </div>
+    
+    <canvas id="canvas" width="500" height="500"></canvas>
+  </body>
+  <script src="script.js"></script>
+</html>
