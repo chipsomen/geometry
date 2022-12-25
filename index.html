@@ -12,7 +12,7 @@
       <button class="tabbutton" onclick="updateTabs('rectangle'); updateShape('createRect')">Rectangle</button>
       <button class="tabbutton" onclick="updateTabs('square'); updateShape('createSq')">Square</button>
       <button class="tabbutton" onclick="updateTabs('rhombus'); updateRhombus('150')">Rhombus</button>
-      <button class="tabbutton" onclick="updateTabs('parallelogram'); updatePShape('150', '50', '0')">Parallelogram</button>
+      <button class="tabbutton" onclick="updateTabs('parallelogram'); updatePShape('150', '0', '0')">Parallelogram</button>
     </div>
     
     <div class="shape" id="rectangle">
@@ -76,8 +76,8 @@
       </ul>
       <p>Use the sliders to change the side lengths and angles of the rhombus!<br>No matter what you do, it will <i>always</i> retain these seven properties!</p>
       <input class="slider" type="range" id="5" min="50" max= "450" value="150" oninput="updatePShape(this.value, document.getElementById('6').value, document.getElementById('7').value)">
-      <input class="slider" type="range" id="6" min="50" max= "450" value="150" oninput="updatePShape(document.getElementById('5').value, this.value, document.getElementById('7').value)">
-      <input class="slider" type="range" id="7" min="50" max= "450" value="150" oninput="updatePShape(document.getElementById('5').value, document.getElementById('6').value, this.value)">
+      <input class="slider" type="range" id="6" min="0" max= "450" value="0" oninput="updatePShape(document.getElementById('5').value, this.value, document.getElementById('7').value)">
+      <input class="slider" type="range" id="7" min="0" max= "450" value="0" oninput="updatePShape(document.getElementById('5').value, document.getElementById('6').value, this.value)">
     </div>
     
     <canvas id="canvas" width="500" height="500"></canvas>
