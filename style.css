@@ -68,6 +68,12 @@ canvas {
     display: none;
 }
 
+#parallelogram {
+    position: absolute;
+    top: 40px;
+    display: none;
+}
+
 /* slider css */
 .slidecontainer {
   width: 100%;
